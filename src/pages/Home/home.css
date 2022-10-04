@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background: linear-gradient(45deg, #232dc2, #3f48cc);
+}
+
+.true-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-page {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.top-page a {
+    font-size: larger;
+    color: black;
+    text-decoration: none;
+    margin-left: 15vw;
+}
+
+.images-control {
+    display: flex;
+}
+
+.images-control img {
+    min-width: 10px;
+    max-width: 30px;
+}
+
+.scroll-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 12px;
+    margin-top: 50px;
+    width: 80%;
+}
+
+h2[id='donation'] {
+    margin-top: 1rem;
+    margin-bottom: -1rem;
+}
+
+.adoption-animals {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+img[id='logo'] {
+    max-width: 100px;
+}
+
+img[id='animal-1'] {
+    max-width: 150px;
+}
