@@ -20,9 +20,9 @@ export const Animals = [
   {
     title: "Animal para adoção",
     img: Animal1,
-    name: "Macho",
-    sex: "Fêmea",
-    race: "Pastor Alemão",
+    name: "Maylon",
+    sex: "Macho",
+    race: "Bordier Collie",
     address: "Rua Irmã Maria Auxiliadora, 15",
   },
 ];
