@@ -1,23 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     font-family: 'Abyssinica SIL', serif;
 }
 
-body {
-    height: 100vh;
-    width: 100vw;
-}
-
 .container {
+    height: 100%;
     background: linear-gradient(45deg, #232dc2, #3f48cc);
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    overflow: auto;
+}
+
+.animal-container {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
     justify-content: center;
+    background-color: white;
+    border-radius: 16px;
+    height: 100%;
+    margin-top: 20px;
+}
+
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    border-radius: 16px;
+    width: 25%;
+    height: 100%;
+    margin-top: 20px;
+}
+
+.filter-container h1 {
+    align-self: center;
+}
+
+.filter-container p {
+    margin-left: 20px;
+    font-size: 1.2rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-container {
+    display: flex;
+    align-items: flex-start;
+    padding-right: 8px;
 }
 
 .top-page {
@@ -37,79 +70,12 @@ body {
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    margin-left: 1.5vw;
+    margin-left: 15vw;
 }
 
 .top-page .images-control p img {
     max-width: 30px;
     max-height: 30px;
-}
-
-.scroll-page {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 16px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    width: 80%;
-}
-
-.scroll-page h1 {
-    text-align: center;
-    font-size: xx-large;
-}
-
-.scroll-page img {
-    max-width: 150px;
-}
-
-.scroll-page .filter-animal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.scroll-page .search-input {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    border: black;
-    border-style: outset;
-    border-width: 2px;
-    border-radius: 8px;
-}
-
-.scroll-page .filter-animal input {
-    text-align: center;
-    outline: none;
-    border-radius: 8px;
-    border: none;
-    width: 19rem;
-    height: 2rem;
-}
-
-.scroll-page .filter-animal input::placeholder{
-    color: rgb(102, 102, 102);
-}
-
-.scroll-page .filter-animal button {
-    cursor: pointer;
-    border: none;
-    background-color: white;
-    border-radius: 8px;
-}
-
-.scroll-page .filter-animal button img {
-    height: 2rem;
-    width: 2rem;
-    margin-bottom: -5px;
-    margin-top: -1px;
-    margin-left: -1px;
-    margin-right: -1px;
 }
 
 img[id='logo'] {
@@ -126,13 +92,5 @@ img[id='logo'] {
     .top-page .images-control p {
         font-size: 0.9rem;
         margin-left: 0.7rem;
-    }
-
-    .scroll-page h1 {
-        font-size: x-large;
-    }
-
-    .scroll-page .filter-animal input {
-        width: 14rem;
     }
 }
