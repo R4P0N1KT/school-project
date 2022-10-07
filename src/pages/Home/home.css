@@ -1,72 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Abyssinica SIL', serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
 }
 
 .container {
     background: linear-gradient(45deg, #232dc2, #3f48cc);
-}
-
-.true-page {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .top-page {
     background-color: white;
     display: flex;
     align-items: center;
-    text-align: center;
     width: 100%;
 }
 
-.top-page a {
-    font-size: larger;
-    color: black;
-    text-decoration: none;
-    margin-left: 15vw;
-}
-
-.images-control {
+.top-page .images-control {
     display: flex;
+    align-items: center;
 }
 
-.images-control img {
-    min-width: 10px;
+.top-page .images-control p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 1.5vw;
+}
+
+.top-page .images-control p img {
     max-width: 30px;
+    max-height: 30px;
 }
 
 .scroll-page {
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: white;
-    border-radius: 12px;
+    border-radius: 16px;
     margin-top: 50px;
+    margin-bottom: 50px;
     width: 80%;
 }
 
-h2[id='donation'] {
-    margin-top: 1rem;
-    margin-bottom: -1rem;
+.scroll-page h1 {
+    text-align: center;
+    font-size: xx-large;
 }
 
-.adoption-animals {
+.scroll-page img {
+    max-width: 150px;
+}
+
+.scroll-page .filter-animal {
     display: flex;
-    text-align: center;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+}
+
+.scroll-page .search-input {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border: black;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 8px;
+}
+
+.scroll-page .filter-animal input {
+    text-align: center;
+    outline: none;
+    border-radius: 8px;
+    border: none;
+    width: 19rem;
+    height: 2rem;
+}
+
+.scroll-page .filter-animal input::placeholder{
+    color: rgb(102, 102, 102);
+}
+
+.scroll-page .filter-animal button {
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.scroll-page .filter-animal button img {
+    height: 2rem;
+    width: 2rem;
+    margin-bottom: -5px;
+    margin-top: -1px;
+    margin-left: -1px;
+    margin-right: -1px;
 }
 
 img[id='logo'] {
     max-width: 100px;
+    max-height: 100px;
 }
 
-img[id='animal-1'] {
-    max-width: 150px;
+@media screen and (max-width: 490px) {
+
+    .top-page img[id='logo'] {
+        max-width: 90px;
+    }
+
+    .top-page .images-control p {
+        font-size: 0.9rem;
+        margin-left: 0.7rem;
+    }
+
+    .scroll-page h1 {
+        font-size: x-large;
+    }
+
+    .scroll-page .filter-animal input {
+        width: 14rem;
+    }
 }

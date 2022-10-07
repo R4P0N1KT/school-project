@@ -47,15 +47,15 @@ form {
 }
 
 .input-field input::placeholder {
-    color: rgba(0, 0, 0, 0.5)
+    color: rgba(0, 0, 0, 0.8)
 }
 
-p {
+.login p {
     margin-top: 10px;
     font-size: 1.2rem;
 }
 
-button {
+.login button {
     margin-top: 2rem;
     padding: 0.4rem;
     cursor: pointer;
@@ -72,6 +72,6 @@ button {
     font-size: 1rem;
 }
 
-img {
+.login img {
     margin-right: 1rem;
 }

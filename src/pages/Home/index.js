@@ -1,39 +1,52 @@
 import React from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { LoginImage, Logo, Search } from "../../images/script";
+import { Animals } from '../../domain/factories/animals';
+import { useNavigate } from "react-router-dom";
+import { Popups } from "../../domain/factories/popups";
+import Buttons from "../../components/generate-top-buttons/Buttons";
+import Generate from '../../components/generate-pets/Generate';
 import useAuth from "../../hooks/useAuth";
-import { Animal1, Logo, Cart, Sponssors, LoginImage, Nos } from "../../images/script";
-import './home.css'
-import Generate from '../../components/generate-pets/Generate'
-import {Animals} from '../../domain/factories/animals';
+import './home.css';
 
 const Home = () => {
-  const { signout } = useAuth();
-  const navigate = useNavigate();
 
-  console.log('Pets: ', Animals[0])
+    const { signout }= useAuth();
+    const navigate = useNavigate();
 
   return (
     <main className="container">
-
-        <div className="true-page">
-                <div className="top-page">
-                    <img id="logo" src={Logo} />
-                    <div className="images-control">
-                    <Link to='products'><img src={Cart} /><p>Produtos</p></Link>
-                    <Link to='about'><img src={Nos} /><p>Quem somos nós?</p></Link>
-                    <Link to='sponsors'><img src={Sponssors} /><p>Patrocinadores</p></Link>
-                    <Link>
-                        <img src={LoginImage} onClick={() => [signout(), navigate('/signin')]}/>
-                        <p className="login1">Logout</p>
-                    </Link>
+            <div className="top-page">
+                <img id="logo" src={Logo} />
+                <div className="images-control">
+                    {Popups.map((prop) => {
+                        return (    
+                            <Buttons title={prop.title} img={prop.img} />
+                        );
+                    })}
+                        
+                    <p className="login1" onClick={() => [signout(), navigate('/signin')]}>
+                        <img src={LoginImage}/>
+                        Logout
+                    </p>
+                </div>
+            </div>
+            <div className="scroll-page"> <br/>
+                <div className="filter-animal">
+                    <h1>Filtro</h1>
+                    <div className="search-input">
+                        <input type='text' placeholder="Filtre as características do pet" />
+                        <button><img src={Search} /></button>
                     </div>
                 </div>
-                {Animals.map((prop) => {
-                    return(
-                        <Generate title={prop.title} img={prop.img} name={prop.name} sex={prop.sex} race={prop.race} address={prop.address}/>
-                    )
-                })}
-                <div style={{ marginBottom: "50px" }}></div>
+                <div className="animal-scroll">
+                    <h1>Animais para adoção</h1> <br />
+                    {Animals.map((prop) => {
+                        return(
+                            <Generate title={prop.title} img={prop.img} name={prop.name} sex={prop.sex} race={prop.race} address={prop.address}/>
+                        )
+                    })}
+                </div>
+                <div style={{ marginBottom: "50px" }} />
             </div>
     </main>
   );

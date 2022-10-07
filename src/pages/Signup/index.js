@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import { Logo } from "../../images/script";
 import './signup.css'
@@ -29,7 +29,7 @@ const Signup = () => {
       return;
     }
 
-    alert("Usuário cadatrado com sucesso!");
+    alert("Usuário cadastrado com sucesso!");
     navigate("/");
   };
 
@@ -38,7 +38,7 @@ const Signup = () => {
             <div className='form-container'>
                 <img id="logo" src={Logo} />
                 <h2 id='login'>Registro</h2>
-                <p>{error}</p>
+                <p style={{"color": "red"}}>{error}</p>
                 <form>
                     <div className='input-field'>
                         <input type='email' id='email'
@@ -56,25 +56,9 @@ const Signup = () => {
                             onChange={(e) => setSenha(e.target.value)} required />
                     </div>
                     
-                    <button onClick={handleSignup}>Entrar</button>
+                    <button onClick={handleSignup}>Registrar</button>
                 </form>
-                <span>Ou entre através das redes sociais</span>
-                <div className="footer">
-                    <div className="social-fields">
-                        <div className="social-field twitter">
-                            <a href="#">
-                                <i className="fab fa-twitter"></i>
-                                Conectar-se com Twitter
-                            </a>
-                        </div>
-                        <div className="social-field facebook">
-                            <a href="#">
-                                <i className="fab fa-facebook-f"></i>
-                                Conectar-se com Facebook
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <span>Já possui conta? </span><Link to='/signin'><strong>Faça Login!</strong></Link>
             </div>
         </main>
   );

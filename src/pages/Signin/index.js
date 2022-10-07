@@ -17,9 +17,7 @@ const Signin = () => {
 
     if (!email | !senha) {
       setError("Preencha todos os campos");
-
       
-
       return;
     }
 
@@ -38,7 +36,7 @@ const Signin = () => {
             <div className='form-container'>
             <img id="logo" src={Logo} />
             <h2 id='login'>Login</h2>
-            <p>{error}</p>
+            <p style={{"color": "red"}}>{error}</p>
             <form>
                 <div className='input-field'>
                     <input type='email' id='email'
