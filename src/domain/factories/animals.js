@@ -14,4 +14,17 @@ export const Animals = [
     race: "Pastor Alemão",
     address: "Rua Irmã Maria Auxiliadora, 15",
   },
+  {
+    img: Animal1,
+    name: "Maylon",
+    sex: "Macho",
+    race: "Bordier Collie",
+  },
+  {
+    img: Animal1,
+    name: "Bolinha",
+    sex: "Fêmea",
+    race: "Pastor Alemão",
+    address: "Rua Irmã Maria Auxiliadora, 15",
+  },
 ];
