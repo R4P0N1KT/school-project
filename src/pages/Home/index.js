@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { LoginImage, Logo, Search } from "../../images/script";
-import { useNavigate } from "react-router-dom";
-import { Popups } from "../../domain/factories/popups";
-import Buttons from "../../components/generate-top-buttons/Buttons";
+import React from "react";
+import Buttons from "../../presentation/components/generate-top-buttons/Buttons";
 import useAuth from "../../hooks/useAuth";
 import AnimalsContainer from "../../presentation/components/animals-container/Animals-container";
+import { LoginImage, Logo } from "../../images/script";
+import { useNavigate } from "react-router-dom";
+import { Popups } from "../../domain/factories/popups";
 import { Filter } from "../../presentation/components/filter-container/Filter";
 import "./home.css";
 
