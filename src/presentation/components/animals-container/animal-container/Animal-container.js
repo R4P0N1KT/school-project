@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Animals } from "../../../../domain/factories/animals";
 import Generate from "../../generate-pets/Generate";
+import { Unchecked } from "../../../../images/script";
 import "./animal-container.css";
 
 export default function AnimalsContainer() {
@@ -25,9 +26,8 @@ export default function AnimalsContainer() {
           <div className="top-filter">
             <h2>Filtro</h2>
             <input
-              type="text"
               value={search}
-              placeholder="EX: BORDIER COLLIE"
+              placeholder="Filtre aqui"
               onChange={(e) => setSearch(e.target.value)}
             />
           </div>
@@ -54,7 +54,10 @@ export default function AnimalsContainer() {
           {expand == false
             ? Filter.map((animal) => {
                 return (
-                  <p id="check" onClick={() => setSearch(animal.race)}>{animal.race}</p>
+                  <a id="checked?" onClick={() => setSearch(animal.race)}>
+                    <img src={Unchecked} />
+                    <p id="check">{animal.race}</p>
+                  </a>
                 );
               })
             : null}
@@ -81,13 +84,15 @@ export default function AnimalsContainer() {
           {expands == false
             ? Filter.map((animal) => {
                 return (
-                  <p id="check" onClick={() => setSearch(animal.sex)}>
-                    {animal.sex}
-                  </p>
+                  <a id="checked?" onClick={() => setSearch(animal.sex)}>
+                    <img src={Unchecked} />
+                    <p id="check">{animal.sex}</p>
+                  </a>
                 );
               })
             : null}
-        </div> <br/>
+        </div>{" "}
+        <br />
         <div className="animals-organization">
           {Filter.map((prop) => {
             return (

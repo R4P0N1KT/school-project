@@ -16,7 +16,6 @@
 .filter-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     border-style:double;
     margin-top: 10px;
     width: 40%;
@@ -58,6 +57,23 @@
     width: 80%;
     text-align: center;
     height: 1.5rem;
+}
+
+.filter-container a[id='checked?'] {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.filter-container a[id='checked?'] p {
+    margin-left: 4px;
+}
+
+.filter-container a[id='checked?'] img {
+    max-width: 20px;
+    max-height: 20px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 490px) {
