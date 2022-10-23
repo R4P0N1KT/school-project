@@ -1,2 +1,2 @@
 export * from './animals';
-export * from './popups';
+export * from './team';

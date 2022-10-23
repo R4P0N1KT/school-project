@@ -1,11 +1,9 @@
 import React from "react";
-import Buttons from "../../presentation/components/generate-top-buttons/Buttons";
 import useAuth from "../../hooks/useAuth";
-import AnimalsContainer from "../../presentation/components/animals-container/Animals-container";
-import { LoginImage, Logo } from "../../images/script";
+import AnimalsContainer from "../../presentation/components/animals-container/animal-container/Animal-container";
+import { LoginImage, Logo, Nos } from "../../images/script";
 import { useNavigate } from "react-router-dom";
-import { Popups } from "../../domain/factories/popups";
-import { Filter } from "../../presentation/components/filter-container/Filter";
+import { Cart } from "../../images/script";
 import "./home.css";
 
 const Home = () => {
@@ -17,9 +15,41 @@ const Home = () => {
       <div className="top-page">
         <img id="logo" src={Logo} />
         <div className="images-control">
-          {Popups.map((prop) => {
-            return <Buttons title={prop.title} img={prop.img} />;
-          })}
+          <p className="products" onClick={() => navigate("/products")}>
+            <a
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <img src={Cart} /> Products
+            </a>
+          </p>
+          <p className="about us" onClick={() => navigate("/about-us")}>
+            <a
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <img src={Nos} /> About Us
+            </a>
+          </p>
+
+          <p className="sponsors" onClick={() => navigate("/sponsors")}>
+            <a
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <img src={Cart} /> Sponsors
+            </a>
+          </p>
+
           <p
             className="login1"
             onClick={() => [signout(), navigate("/signin")]}
@@ -30,8 +60,7 @@ const Home = () => {
         </div>
       </div>
       <main className="container">
-          <Filter/>
-          <AnimalsContainer />
+        <AnimalsContainer />
       </main>
     </div>
   );

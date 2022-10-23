@@ -3,6 +3,8 @@
     flex-direction: column;
     text-align: left;
     align-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .adoption-animals h2 {
@@ -12,7 +14,8 @@
 .adoption-animals img {
     background-color: black;
     border-radius: 8px;
-    max-width: 150px;
+    width: 150px;
+    height: 152.13px;
     padding: 3px;
 }
 
@@ -20,6 +23,7 @@
     display: flex;
     box-shadow: 2.5px 2.5px 5px;
     border-radius: 10px;
+    max-width: 300px;
     padding: 1rem;
 }
 

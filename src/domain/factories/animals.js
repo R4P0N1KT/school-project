@@ -1,4 +1,4 @@
-import { Animal1 } from "../../images/script";
+import { Animal1, Animal2, Animal3, Animal4 } from "../../images/script";
 
 export const Animals = [
   {
@@ -8,23 +8,21 @@ export const Animals = [
     race: "Bordier Collie",
   },
   {
-    img: Animal1,
-    name: "Bolinha",
+    img: Animal2,
+    name: "Luna",
     sex: "Fêmea",
-    race: "Pastor Alemão",
-    address: "Rua Irmã Maria Auxiliadora, 15",
+    race: "Husky",
   },
   {
-    img: Animal1,
-    name: "Maylon",
+    img: Animal3,
+    name: "Fred",
     sex: "Macho",
-    race: "Bordier Collie",
+    race: "Golden Retriver",
   },
   {
-    img: Animal1,
-    name: "Bolinha",
+    img: Animal4,
+    name: "Martina",
     sex: "Fêmea",
-    race: "Pastor Alemão",
-    address: "Rua Irmã Maria Auxiliadora, 15",
-  },
+    race: "Vira-Lata",
+  }
 ];

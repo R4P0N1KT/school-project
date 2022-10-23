@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
+import About from "../pages/About-Us/About";
 import Home from "../pages/Home";
 import Signin from "../pages/Signin";
 import Signup from "../pages/Signup";
@@ -19,6 +20,7 @@ const RoutesApp = () => {
           <Route exact path="/" element={<Private Item={Home} />} />
           <Route path="/signin" element={<Signin />} />
           <Route exact path="/signup" element={<Signup />} />
+          <Route exact path="/about-us" element={<About />} />
         </Routes>
       </Fragment>
     </BrowserRouter>
